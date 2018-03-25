@@ -3,11 +3,11 @@
   position: relative;
   overflow: hidden;
   color: var(--white);
-  &:after {
+  &::after {
     background: var(--white);
     content: "";
     height: 9rem;
-    top: 90%; right: -5%; left: -5%;
+    top: 80%; right: -5%; left: -5%;
     position: absolute;
     transform-origin: 25% 50%;
     transform: rotateZ(-5deg);
@@ -51,6 +51,11 @@
 }
 
 @media screen and (min-width: 600px) {
+  .header--primary {
+    &::after {
+      top: 90%;
+    }
+  }
   .heading--1 {
     font-size: 3rem;
   }

@@ -17,11 +17,11 @@ body {
   position: relative;
   overflow: hidden;
   color: var(--white); }
-  .header--primary:after {
+  .header--primary::after {
     background: var(--white);
     content: "";
     height: 9rem;
-    top: 90%;
+    top: 80%;
     right: -5%;
     left: -5%;
     position: absolute;
@@ -64,6 +64,9 @@ body {
   font-weight: 600; }
 
 @media screen and (min-width: 600px) {
+  .header--primary::after {
+    top: 90%; }
+
   .heading--1 {
     font-size: 3rem; }
 
