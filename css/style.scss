@@ -1,0 +1,22 @@
+:root {
+  --white: #FFF;
+  --orange: #EF910B;
+  --dark--grey: rgb(13,13,13);
+  --light--grey: rgb(42,42,42);
+}
+
+body {
+  margin: 0;
+  font-family: 'Avenir Next', sans-serif; font-size: 100%;
+  background: var(--white);
+  color: var(--light--grey);
+  letter-spacing: -1px;
+}
+
+@import 'header';
+@import 'nav';
+
+
+
+@import 'footer';
+@import 'contact';
