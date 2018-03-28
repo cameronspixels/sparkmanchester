@@ -7,16 +7,70 @@
 
 body {
   margin: 0;
-  font-family: 'Avenir Next', sans-serif; font-size: 100%;
-  background: var(--white);
-  color: var(--light--grey);
-  letter-spacing: -1px;
+  font-family: 'Avenir Next', sans-serif; font-size: 100%; letter-spacing: -1px;
+  background: var(--white); color: var(--light--grey);
 }
 
 @import 'header';
 @import 'nav';
 
+// Headings
+.heading--1 {
+  margin: 2rem 0 0 0;
+  max-width: 600px;
+  font-size: 2.5rem;
+}
+
+.main--wrapper {
+  padding: 2rem 20px;
+  position: relative;
+}
+
+.main--body {
+  margin: 2rem 0 0 0;
+  max-width: 38rem;
+  font-size: 1.1rem; line-height: 1.5;
+}
+
+.main--image {
+  margin: 2rem 0 0 0;
+  height: 200px; width: 100%;
+  display: inline-block;
+  object-fit: cover;
+  max-width: 600px;
+}
 
 
 @import 'footer';
 @import 'contact';
+
+@media screen and (min-width: 600px) {
+  .heading--1 {
+    margin: -2rem 2rem 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .main--body {
+    margin: 2rem 2rem 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main--image {
+    margin: 2rem auto 0 2rem;
+    max-width: calc(100% - 48rem);
+    position: absolute;
+    top: 0; height: 400px;
+    background: var(--white);
+    &::before {
+      content: "";
+      height: 5rem;
+      top: -2rem; right: -.5rem; left: -.5rem;
+      position: absolute;
+      transform-origin: 25% 50%;
+      transform: rotateZ(-5deg);
+      background: var(--white);
+    }
+  }
+}
